@@ -1,0 +1,3 @@
+# elemen HTML
+! akan muncul kaya obeng kilik obengnya kemudian akan muncul format
+dokumen langsung bawaan HTML.ini format standar Html untuk bisa ngooding
