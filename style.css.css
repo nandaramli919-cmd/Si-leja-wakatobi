@@ -1,202 +1,381 @@
-/* RESET & BASIC STYLES */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ==========================
+   RESET
+========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 
-body {
-    background-color: #f9f6f0;
-    color: #333;
-    line-height: 1.6;
+html{
+    scroll-behavior:smooth;
 }
 
-/* NAVIGATION */
-header {
-    background-color: #4a1525;
-    color: #fff;
-    padding: 20px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body{
+    background:#f9f6f0;
+    color:#333;
+    line-height:1.8;
+    font-size:18px;
 }
 
-header h1 {
-    font-size: 24px;
-    letter-spacing: 2px;
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:#4a1525;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
+header h1{
+    font-size:32px;
+    letter-spacing:2px;
 }
 
-nav ul li {
-    margin-left: 20px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-nav ul li a:hover {
-    color: #f00b0b;
+nav ul li a:hover{
+    color:#f4c542;
 }
 
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(rgba(49, 2, 16, 0.7), rgba(74, 21, 37, 0.7)),
-    url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?ixlib=rb-4.0.3')
-    no-repeat center center/cover;
+/* ==========================
+   HERO
+========================== */
 
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+.hero{
+    background:
+    linear-gradient(rgba(74,21,37,.7),rgba(74,21,37,.7)),
+    url("https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?ixlib=rb-4.0.3")
+    center/cover no-repeat;
+
+    height:70vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
 }
 
-.hero h2 {
-    font-size: 42px;
-    color: #fff;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.hero h2{
+    color:white;
+    font-size:52px;
+    margin-bottom:15px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.4);
 }
 
-.hero p {
-    font-size: 18px;
-    color: #d4af37;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+.hero p{
+    color:#f4c542;
+    font-size:24px;
+    font-weight:bold;
 }
 
-/* MAIN CONTENT */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
 }
 
-/* TENTANG */
-.tentang {
-    background-color: #ecd8d8;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(16, 9, 9, 0.05);
-    margin-bottom: 40px;
-    border-left: 5px solid #4a1525;
+/* ==========================
+   TENTANG
+========================== */
+
+.tentang{
+    background:#ecd8d8;
+    padding:45px;
+    border-left:8px solid #4a1525;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-bottom:50px;
 }
 
-.tentang h3 {
-    color: #1d1115;
-    margin-bottom: 15px;
-    font-size: 24px;
+.tentang h3{
+    font-size:42px;
+    color:#1d1115;
+    margin-bottom:25px;
 }
 
-/* MOTIF */
-.motif-title {
-    background: #dd8484;
-    text-align: center;
-    color: #1e0e13;
-    margin-bottom: 30px;
-    font-size: 28px;
-    position: relative;
+.tentang p{
+    font-size:22px;
+    text-align:justify;
+    margin-bottom:20px;
+    overflow-wrap:break-word;
 }
 
+/* ==========================
+   JUDUL MOTIF
+========================== */
 
-
-.grid-motif {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.motif-title{
+    background:#dd8484;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    font-size:36px;
+    color:#241116;
+    margin-bottom:35px;
 }
 
-.card {
-    background-color: #eee2ee;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+/* ==========================
+   GRID
+========================== */
+
+.grid-motif{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.card-img {
-    width: 100%;
-    height: 220px;
-    background-color: #dd8484;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-style: italic;
-    background-size: cover;
-    background-position: center;
+.card:hover{
+    transform:translateY(-8px);
 }
 
-.bg-motif1 {
-    background-color: #f1c2c2;
-    color: #fff;
+.card-img{
+    width:100%;
+    height:250px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+    font-size:20px;
+    font-weight:bold;
 }
 
-.bg-motif2 {
-    background-color: #d3cfef;
-    color: #fff;
+.bg-motif1{
+    background:#f1c2c2;
 }
 
-.bg-motif3 {
-    background-color: #bedbdb;
-    color: #fff;
+.bg-motif2{
+    background:#d3cfef;
 }
 
-.card-content {
-    padding: 20px;
+.bg-motif3{
+    background:#bedbdb;
 }
 
-.card-content h4 {
-    color: #4a1525;
-    margin-bottom: 10px;
-    font-size: 20px;
+.card-content{
+    padding:25px;
 }
 
-/* FOOTER */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 14px;
+.card-content h4{
+    color:#4a1525;
+    font-size:28px;
+    margin-bottom:15px;
 }
 
-footer span {
-    color: #d4af37;
+.card-content p{
+    font-size:19px;
+    text-align:justify;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
+/* ==========================
+   FOOTER
+========================== */
 
-    nav ul {
-        margin-top: 15px;
-    }
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+    font-size:18px;
+}
 
-    .hero h2 {
-        font-size: 30px;
-    }
+footer span{
+    color:#f4c542;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media screen and (max-width:992px){
+
+header{
+    padding:20px 30px;
+}
+
+.hero h2{
+    font-size:44px;
+}
+
+.tentang h3{
+    font-size:36px;
+}
+
+}
+
+/* ==========================
+   HP
+========================== */
+
+@media screen and (max-width:768px){
+
+body{
+    font-size:20px;
+}
+
+header{
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+nav ul li a{
+    font-size:20px;
+}
+
+.hero{
+    height:auto;
+    min-height:70vh;
+    padding:40px 20px;
+}
+
+.hero h2{
+    font-size:42px;
+    line-height:1.3;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+.container{
+    width:100%;
+    padding:20px 15px;
+}
+
+.tentang{
+    padding:25px;
+}
+
+.tentang h3{
+    font-size:40px;
+}
+
+.tentang p{
+    font-size:22px;
+    line-height:1.9;
+}
+
+.motif-title{
+    font-size:34px;
+}
+
+.grid-motif{
+    grid-template-columns:1fr;
+}
+
+.card-img{
+    height:250px;
+}
+
+.card-content h4{
+    font-size:30px;
+}
+
+.card-content p{
+    font-size:21px;
+}
+
+footer{
+    font-size:18px;
+}
+
+}
+
+/* ==========================
+   HP KECIL
+========================== */
+
+@media screen and (max-width:480px){
+
+header h1{
+    font-size:28px;
+}
+
+.hero h2{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.tentang h3{
+    font-size:34px;
+}
+
+.tentang p{
+    font-size:20px;
+}
+
+.motif-title{
+    font-size:28px;
+}
+
+.card-content h4{
+    font-size:26px;
+}
+
+.card-content p{
+    font-size:19px;
+}
+
 }
